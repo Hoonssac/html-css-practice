@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: 'nanum';
+        font-style: normal;
+        src: url(font/NanumSquareR.ttf) format('woff2');
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: nanum;
+      }
+      .container {
+        width: 80%;
+        height: 100vh;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .container img {
+        width: 400px;
+        margin: 30px 0;
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px black;
+      }
+      .container p {
+      }
+      .container button {
+        margin: 20px 0;
+        padding: 10px 30px;
+        border-radius: 20px;
+        border: solid 1.5px gray;
+        transition: all 0.5s;
+      }
+      .container button:hover {
+        background-color: rgb(244, 210, 216);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="./images/yiyom.jpg" />
+      <p>이욤이는 오늘도 편안하게 여유를 즐깁니다.</p>
+      <button>함께 떠나기</button>
+    </div>
+  </body>
+</html>
