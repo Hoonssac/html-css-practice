@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('./images/bg.jpg');
+}
+
+.container {
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container .heros {
+  margin-top: 90px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container .heros .hero-container {
+  width: 80px;
+  height: 80px;
+  margin: 3px;
+  border: solid 3px white;
+  border-radius: 7px;
+  background-color: rgb(82, 82, 82);
+  /* overflow: hidden; 이미지가 컨테이너를 벗어나지 않도록 */
+  transform: skew(-10deg);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  cursor: pointer;
+}
+
+/* 이미지 스타일 */
+.container .heros .hero-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지 비율 유지 */
+  transform: skew(10deg); /* 이미지를 반대 방향으로 기울여 원래 모양 유지 */
+  transform-origin: center; /* 변형 기준점을 중앙으로 */
+  transition: transform 0.2s ease;
+}
+
+.container .logo img {
+  width: 300px;
+}
+/* 
+.container .heros img {
+  width: 80px;
+  border: solid 3px white;
+  border-radius: 7px;
+  background-color: rgb(82, 82, 82);
+  margin: 3px 3px;
+  transform: skew(-10deg);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+} */
+
+/* 호버 효과 */
+.container .heros .hero-container:hover {
+  background-color: orange;
+  transform: skew(-10deg) scale(1.3); /* 평행사변형 유지하면서 확대 */
+  z-index: 1000;
+}
+
+/* 호버 시 이미지도 함께 확대되지만 skew는 그대로 유지 */
+.container .heros .hero-container:hover img {
+  transform: skew(10deg); /* skew 유지 */
+}
